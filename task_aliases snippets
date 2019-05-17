@@ -1,0 +1,16 @@
+projects=$(projects_without_next_action.sh)
+if [ "$projects" != "" ]
+then
+  print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
+  echo $projects
+  echo
+fi
+
+-
+
+waiting=$(task +waiting +PENDING count)
+if [ "$waiting" != "0" ]
+then
+  echo "Any progress on these waiting-fors?"
+  task +waiting +PENDING ls
+fi
