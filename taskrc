@@ -1,0 +1,84 @@
+#
+# [Created by task 2.5.1 3/21/2019 19:09:57]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/.task
+
+# Color theme (uncomment one to use)
+#include /usr/share/taskwarrior/light-16.theme
+#include /usr/share/taskwarrior/light-256.theme
+#include /usr/share/taskwarrior/dark-16.theme
+#include /usr/share/taskwarrior/dark-256.theme
+#include /usr/share/taskwarrior/dark-red-256.theme
+#include /usr/share/taskwarrior/dark-green-256.theme
+#include /usr/share/taskwarrior/dark-blue-256.theme
+#include /usr/share/taskwarrior/dark-violets-256.theme
+#include /usr/share/taskwarrior/dark-yellow-green.theme
+#include /usr/share/taskwarrior/dark-gray-256.theme
+#include /usr/share/taskwarrior/dark-gray-blue-256.theme
+#include /usr/share/taskwarrior/solarized-dark-256.theme
+#include /usr/share/taskwarrior/solarized-light-256.theme
+#include /usr/share/taskwarrior/no-color.theme
+
+#GTD
+#
+#Collection
+report.in.columns           = id,description
+report.in.description       = Inbox
+report.in.filter            = status:pending limit:page (+in)
+report.in.labels            = ID,Description
+
+#Brain Power
+
+uda.brainpower.type=string
+uda.brainpower.label=Brainpower
+uda.brainpower.values=H,M,L
+uda.brainpower.default=M
+
+#Reports
+
+#Next
+report.next.description     = Most urgent tasks
+report.next.columns         = id,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,brainpower
+report.next.filter          = status:pending -sdm
+report.next.labels          = ID,Urgency,Depends,Priority,Project,Tag,Recur,Scheduled,Due,Until,Description,Brainpower
+report.next.sort            = project-,brainpower+,priority-,urgency-
+
+#Someday/Maybe
+report.sdm.description     = Someday/Maybe
+report.sdm.columns         = id,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,brainpower
+report.sdm.filter          = status:pending +sdm
+report.sdm.labels          = ID,Urgency,Depends,Priority,Project,Tag,Recur,Scheduled,Due,Until,Description,Brainpower
+
+#No Next action
+report.nna.description     = No Next Action
+report.nna.columns         = project
+report.nna.filter          = +PENDING +READY -next -waiting -sdm
+report.nna.labels          = Project
+
+#Estimate
+
+uda.estimate.type=numeric
+uda.estimate.label=Estimate
+
+context.car=+@car or +@online or +@phone
+context.online=+@ol
+context.farm=+@farm or +@phone or +@online or +@pc or +@shop
+
+tasksh.autoclear=1
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )

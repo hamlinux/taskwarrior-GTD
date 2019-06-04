@@ -1,0 +1,83 @@
+#Aliases
+
+#Taskwarrior Command Aliases
+alias t='task'
+alias ta='task add'
+alias tc='clear & task'
+alias tin='clear & task in'
+alias dn='tc done'
+alias ts='tc sync'
+
+#Reports Aliases
+alias nxt='tc +next list'
+alias nnr='tc nnr'
+alias sdm='tc +sdm list'
+alias ol='tc +@ol'
+alias rw='tc +@rw list'
+alias lc='tc +@lc'
+alias so='tc +@so'
+alias store='tc +@store'
+alias mh='tc +@mh'
+
+#Collection
+export PS1='$(task +in +PENDING count) '$PS1
+alias in='tc add +in'
+
+#Tickle Folder
+tickle () {
+    deadline=$1
+    shift
+    in +tickle wait:$deadline $@
+}
+alias tick=tickle
+
+#Think
+alias think='tickle +1d'
+
+#Processing
+alias rnd='task add +rnd +next +@computer +@online'
+
+webpage_title (){
+    wget -qO- "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
+}
+
+read_and_review (){
+    link="$1"
+    title=$(webpage_title $link)
+    echo $title
+    descr="\"Read and review: $title\""
+    id=$(task add +in +rnr "$descr" | sed -n 's/Created task \(.*\)./\1/p')
+    task "$id" annotate "$link"
+}
+
+alias rnr=read_and_review
+
+#Notes
+note_ () {
+  local id="$1"
+  local dir="$HOME/workflow/projects"
+  local file="$dir/$id.org"
+
+  mkdir -p $dir
+  e "$file"
+}
+
+alias n=note_
+
+#Project needs next action
+
+#projects=$(task nna)
+#if [ "$projects" != "" ]
+#then
+#  print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
+#  echo $projects echo
+#fi
+
+#Waiting for
+
+waiting=$(task waiting count)
+if [ "$waiting" != "0" ]
+then
+  echo "Any progress on these waiting-fors?"
+  task waiting
+fi
