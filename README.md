@@ -18,4 +18,4 @@ Taskwarrior uses concepts and techniques described in Getting Things Done by Dav
 
 Uses templates produced by Tom Sydney Kerckhove is a series of blog posts (https://cs-syd.eu/tags/Taskwarrior) about integrating taskwarrior into a specific GTD workflow, modifying reports and creating scripts that are built upon the GTD concepts of:**Collection, Clarifying, Organize, Reflect, Engage**
   
- I have included some of my own reports and aliases to meet my own GTD needs and to make the ability to accomplish these steps as organically as ppossible without breaking stride in daily life. 
+ I have included some of my own reports and aliases to meet my own GTD needs and to make the ability to accomplish these steps as organically as possible without breaking stride in daily life. 
