@@ -20,4 +20,4 @@ Uses templates produced by Tom Sydney Kerckhove is a series of blog posts (https
   
  I have included some of my own reports and aliases to meet my own GTD needs and to make the ability to accomplish these steps as organically as possible without breaking stride in daily life.
  
- The system also integrates with the MUTT email client and script Mutt2task.  Also recommended is **Mutt Wizard**. https://github.com/lukesmithxyz/muttwizard
+ The system also integrates with the MUTT email client and script Mutt2task.  Also recommended is **Mutt Wizard**. https://github.com/lukesmithxyz/mutt-wizard
