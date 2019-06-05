@@ -1,6 +1,7 @@
 ##
 # GTD for Taskwarrior
 
+##
 #Indroduction
 #GTD
 Getting Things Done (abbreviated to G.T.D.) is a time management method, described in the book of the same title[1] by productivity consultant David Allen. 
