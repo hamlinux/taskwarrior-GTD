@@ -22,7 +22,7 @@ Uses templates produced by Tom Sydney Kerckhove is a series of blog posts (https
  I have included some of my own reports and aliases to meet my own GTD needs and to make the ability to accomplish these steps as organically as possible without breaking stride in daily life.
  
 
- The usr of tasksh with the review is a great way of doing a GTD weekly review.  Autoclear is set true in .taskrc to clear the screen after each task is reviewed to reduce mental clutter.
+ The use of tasksh with the review is a great way of doing a GTD weekly review.  Autoclear is set true in .taskrc to clear the screen after each task is reviewed to reduce mental clutter.
  
  The system also integrates with the MUTT email client and script Mutt2task.  Also recommended is **Mutt Wizard**. https://github.com/lukesmithxyz/mutt-wizard
 
