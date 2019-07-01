@@ -10,7 +10,7 @@ colortheme:
 ---
 # **GTD**
 
-![](gtdbook.jpg)
+![](gtd-book.jpg)
 
 Getting Things Done (abbreviated to G.T.D.) is a time management method, described in the book of the same title by productivity consultant David Allen.
 The GTD method rests on the idea of moving planned tasks and projects out of the mind
@@ -61,7 +61,19 @@ I have created some of my own reports and aliases to meet my personal GTD needs.
 The free online cloud Service **Freecinc** offer a nearly painless interface and setup for syncing Taskwarrior data between devices.
 
 # **Mobile Life**
-I use this same set up for collection and reflection on the go with my **Android** phone running **Termux**.
+I use this same setup for collection and reflection on the go with my **Android** phone running **Termux**.
+
+# **Work flow**
+
+* Throughout the day collect stuff with the 'IN' command
+* Each Morning clear IN by adding contexts, tags, and projects as well as assigning Next Actions.
+* If a task can be completed in less than two minutes in the present context, **DO IT**.
+* Check Projects to see if **next actions** have been completed.  Mark completed tasks as **done**.  Assign new  **NEXT** action.
+* Throughout the day modify filter by **Context, Estimated Time, Energy Required**.  In this order.
+
+# **Weekly Review**
+
+
 
 # **Questions?**
 
@@ -69,7 +81,7 @@ I use this same set up for collection and reflection on the go with my **Android
 * https://gettingthingsdone.com
 * https://freecinc.com
 * email hamlinux@gmail.com
-* github https://github.com/hamlinux
+* github https://github.com/hamlinux/taskwarrior-GTD
 
 [^1]:https://en.wikipedia.org/wiki/Getting_Things_Done
 [^2]:https://en.wikipedia.org/wiki/Taskwarrior
