@@ -44,36 +44,36 @@ There are several components included in Taskwarrior to allow for granular organ
 These are:
 
 * Filters
+* Tags
 * Reports
 * Contexts
-* Tags
 * UDA's
 
 # **Customizations:**
 I have created some of my own reports and aliases to meet my personal GTD needs.  The goal was to accomplish these steps as organically as possible without breaking stride in daily life.  If the process is too complicated it will be quickly discarded or ignored.
 
 # **Suggestions:**
- The use of **tasksh** with the 'review' command is a great way of doing a GTD weekly review.  Autoclear is set true in .taskrc to clear the screen after each task is reviewed to reduce mental clutter.
+ The use of **tasksh** with the 'review' command is a great way of doing a GTD weekly review.
 
- The system also integrates with the **MUTT** email client and script **Mutt2task**.  Also recommended is **Mutt Wizard**. https://github.com/lukesmithxyz/mutt-wizard
+ The system also integrates with the **MUTT** email client and the script **Mutt2task**.
+
+**Taskopen** is script that opens urls referenced with a task
+
+# **Work flow**
+
+* Throughout the day collect stuff with the 'IN' command
+* Each Morning clear *IN* by adding contexts, tags, and projects as well as assigning *Next Actions*.
+* If a task can be completed in less than two minutes in the present context, **DO IT**.
+* Check Projects to see if **next actions** have been completed.
+* Mark completed tasks as **done**.
+* Assign new  **NEXT** action.
+* Throughout the day modify filter by **Context, Estimated Time, Energy Required**.  In this order.
 
 # **Syncing**
 The free online cloud Service **Freecinc** offer a nearly painless interface and setup for syncing Taskwarrior data between devices.
 
 # **Mobile Life**
 I use this same setup for collection and reflection on the go with my **Android** phone running **Termux**.
-
-# **Work flow**
-
-* Throughout the day collect stuff with the 'IN' command
-* Each Morning clear IN by adding contexts, tags, and projects as well as assigning Next Actions.
-* If a task can be completed in less than two minutes in the present context, **DO IT**.
-* Check Projects to see if **next actions** have been completed.  Mark completed tasks as **done**.  Assign new  **NEXT** action.
-* Throughout the day modify filter by **Context, Estimated Time, Energy Required**.  In this order.
-
-# **Weekly Review**
-
-
 
 # **Questions?**
 
