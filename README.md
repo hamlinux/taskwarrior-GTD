@@ -29,7 +29,7 @@ Taskwarrior uses concepts and techniques described in Getting Things Done by Dav
 
 This projects uses templates produced by Tom Sydney Kerckhove in a series of blog posts (https://cs-syd.eu/tags/Taskwarrior) about integrating taskwarrior into a specific GTD workflow, modifying reports and creating scripts that are built upon the GTD concepts of:
 
-* Collection
+* Capture
 * Clarifying
 * Organize
 * Reflect
@@ -49,28 +49,20 @@ These are:
 * Contexts
 * UDA's
 
-# **Customizations:**
-I have created some of my own reports and aliases to meet my personal GTD needs.  The goal was to accomplish these steps as organically as possible without breaking stride in daily life.  If the process is too complicated it will be quickly discarded or ignored.
-
-# **Suggestions:**
- The use of **tasksh** with the 'review' command is a great way of doing a GTD weekly review.
-
- The system also integrates with the **MUTT** email client and the script **Mutt2task**.
-
-**Taskopen** is script that opens urls referenced with a task
+**Located in .taskrc and .task_aliases**
 
 # **Work flow**
 
-* Throughout the day collect stuff with the 'IN' command
-* Each Morning clear *IN* by adding contexts, tags, and projects as well as assigning *Next Actions*.
-* If a task can be completed in less than two minutes in the present context, **DO IT**.
-* Check Projects to see if **next actions** have been completed.
-* Mark completed tasks as **done**.
-* Assign new  **NEXT** action.
-* Throughout the day modify filter by **Context, Estimated Time, Energy Required**.  In this order.
+**Taskwarrior is NOT a Calendar**
+
+* Capture- Throughout the day collect stuff with the 'IN' command
+* Clarify- Decide if tasks in IN are actionable. Assign Contexts, Tags, Estimate Time, and Brainpower.
+* Organize- Create Projects and next actions, Delegate, Defer, Do It.
+* Reflect- Decide What to do next.  Assess if projects are moving forward.  Follow up Delegated tasks.
+* Engage- DO IT.
 
 # **Syncing**
-The free online cloud Service **Freecinc** offer a nearly painless interface and setup for syncing Taskwarrior data between devices.
+The free online cloud Service **Freecinc** offers an interface and setup for syncing Taskwarrior data between devices.
 
 # **Mobile Life**
 I use this same setup for collection and reflection on the go with my **Android** phone running **Termux**.
