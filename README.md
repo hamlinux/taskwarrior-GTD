@@ -8,6 +8,7 @@ theme:
 colortheme:
 - dolphin
 ---
+# **Slide presentation for a talk I gave to the Western North Carolina Linux Users Group**
 # **GTD**
 
 ![](gtd-book.jpg)
